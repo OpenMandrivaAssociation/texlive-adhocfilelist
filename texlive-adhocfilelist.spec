@@ -6,7 +6,7 @@
 # catalog-version 0.7a
 Name:		texlive-adhocfilelist
 Version:	0.7a
-Release:	2
+Release:	3
 Summary:	'\listfiles' entries from the command line
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/adhocfilelist
