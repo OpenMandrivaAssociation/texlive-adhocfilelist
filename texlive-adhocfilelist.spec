@@ -6,7 +6,7 @@
 # catalog-version 0.7a
 Name:		texlive-adhocfilelist
 Version:	0.7a
-Release:	1
+Release:	2
 Summary:	'\listfiles' entries from the command line
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/adhocfilelist
@@ -18,7 +18,7 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Requires:	texlive-adhocfilelist.bin
+Provides:	texlive-adhocfilelist.bin = %{EVRD}
 
 %description
 The package provides a Unix shell script to display a list of
@@ -37,6 +37,7 @@ things) the gnu variant of the find command.
 
 #-----------------------------------------------------------------------
 %files
+%{_bindir}/adhocfilelist
 %{_texmfdistdir}/scripts/adhocfilelist/adhocfilelist.sh
 %{_texmfdistdir}/scripts/adhocfilelist/herelist.sh
 %doc %{_texmfdistdir}/doc/support/adhocfilelist/RELEASE.txt
@@ -55,5 +56,9 @@ things) the gnu variant of the find command.
 %build
 
 %install
+mkdir -p %{buildroot}%{_bindir}
+pushd %{buildroot}%{_bindir}
+    ln -sf %{_texmfdistdir}/scripts/adhocfilelist/adhocfilelist.sh adhocfilelist
+popd
 mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf-dist %{buildroot}%{_datadir}
