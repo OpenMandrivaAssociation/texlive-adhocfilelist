@@ -1,12 +1,12 @@
-# revision 28038
+# revision 29349
 # category Package
 # catalog-ctan /support/adhocfilelist
-# catalog-date 2012-10-20 17:13:23 +0200
+# catalog-date 2013-01-04 14:33:54 +0100
 # catalog-license lppl
-# catalog-version 0.7a
+# catalog-version 2013-01-04
 Name:		texlive-adhocfilelist
-Version:	0.7a
-Release:	3
+Version:	20130104
+Release:	1
 Summary:	'\listfiles' entries from the command line
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/adhocfilelist
@@ -40,14 +40,18 @@ things) the gnu variant of the find command.
 %{_bindir}/adhocfilelist
 %{_texmfdistdir}/scripts/adhocfilelist/adhocfilelist.sh
 %{_texmfdistdir}/scripts/adhocfilelist/herelist.sh
-%doc %{_texmfdistdir}/doc/support/adhocfilelist/RELEASE.txt
+%{_texmfdistdir}/tex/support/adhocfilelist/adhocfilelist.RLS
+%doc %{_texmfdistdir}/doc/support/adhocfilelist/README
+%doc %{_texmfdistdir}/doc/support/adhocfilelist/RELEASEs.txt
 %doc %{_texmfdistdir}/doc/support/adhocfilelist/SrcFILEs.txt
 %doc %{_texmfdistdir}/doc/support/adhocfilelist/adhocfilelist.htm
-%doc %{_texmfdistdir}/doc/support/adhocfilelist/makehtml.log
+%doc %{_texmfdistdir}/doc/support/adhocfilelist/demo/herelist.txt
 #- source
-%doc %{_texmfdistdir}/source/adhocfilelist/adhocfilelist.tex
-%doc %{_texmfdistdir}/source/adhocfilelist/srcfiles.tex
-%doc %{_texmfdistdir}/source/adhocfilelist/texblog.fdf
+%doc %{_texmfdistdir}/source/support/adhocfilelist/adhocfilelist.tex
+%doc %{_texmfdistdir}/source/support/adhocfilelist/fdatechk.tex
+%doc %{_texmfdistdir}/source/support/adhocfilelist/makehtml.tex
+%doc %{_texmfdistdir}/source/support/adhocfilelist/srcfiles.tex
+%doc %{_texmfdistdir}/source/support/adhocfilelist/texblog.fdf
 
 #-----------------------------------------------------------------------
 %prep
