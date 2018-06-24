@@ -5,7 +5,7 @@
 # catalog-license lppl
 # catalog-version 2013-01-04
 Name:		texlive-adhocfilelist
-Version:	20170414
+Version:	20180303
 Release:	1
 Summary:	'\listfiles' entries from the command line
 Group:		Publishing
