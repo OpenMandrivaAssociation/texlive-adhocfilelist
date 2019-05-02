@@ -5,8 +5,8 @@
 # catalog-license lppl
 # catalog-version 2013-01-04
 Name:		texlive-adhocfilelist
-Version:	20180303
-Release:	2
+Version:	20190228
+Release:	1
 Summary:	'\listfiles' entries from the command line
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/adhocfilelist
