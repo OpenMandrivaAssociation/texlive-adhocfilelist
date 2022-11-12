@@ -5,9 +5,9 @@ Summary:	'\listfiles' entries from the command line
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/adhocfilelist
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/adhocfilelist.r29349.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/adhocfilelist.doc.r29349.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/adhocfilelist.source.r29349.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/adhocfilelist.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/adhocfilelist.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/adhocfilelist.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
