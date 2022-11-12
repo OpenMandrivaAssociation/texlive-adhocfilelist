@@ -1,19 +1,13 @@
-# revision 29349
-# category Package
-# catalog-ctan /support/adhocfilelist
-# catalog-date 2013-01-04 14:33:54 +0100
-# catalog-license lppl
-# catalog-version 2013-01-04
 Name:		texlive-adhocfilelist
-Version:	20190228
+Version:	29349
 Release:	1
 Summary:	'\listfiles' entries from the command line
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/adhocfilelist
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/adhocfilelist.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/adhocfilelist.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/adhocfilelist.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/adhocfilelist.r29349.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/adhocfilelist.doc.r29349.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/adhocfilelist.source.r29349.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -28,12 +22,12 @@ package was developed on a Unix-like system, using (among other
 things) the gnu variant of the find command.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -55,14 +49,15 @@ things) the gnu variant of the find command.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_bindir}
 pushd %{buildroot}%{_bindir}
-    ln -sf %{_texmfdistdir}/scripts/adhocfilelist/adhocfilelist.sh adhocfilelist
+ln -sf %{_texmfdistdir}/scripts/adhocfilelist/adhocfilelist.sh adhocfilelist
 popd
 mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf-dist %{buildroot}%{_datadir}
