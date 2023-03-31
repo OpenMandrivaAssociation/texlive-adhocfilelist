@@ -1,6 +1,6 @@
 Name:		texlive-adhocfilelist
 Version:	29349
-Release:	1
+Release:	2
 Summary:	'\listfiles' entries from the command line
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/adhocfilelist
