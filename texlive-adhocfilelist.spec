@@ -3,7 +3,7 @@ Version:	29349
 Release:	2
 Summary:	'\listfiles' entries from the command line
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/support/adhocfilelist
+URL:		https://www.ctan.org/tex-archive/support/adhocfilelist
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/adhocfilelist.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/adhocfilelist.doc.r%{version}.tar.xz
