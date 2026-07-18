@@ -1,5 +1,6 @@
 %global tl_name adhocfilelist
 %global tl_revision 79618
+%global tl_bin_links adhocfilelist:%{_texmfdistdir}/scripts/adhocfilelist/adhocfilelist.sh
 
 Name:		texlive-%{tl_name}
 Version:	%{tl_revision}
@@ -15,6 +16,8 @@ BuildArch:	noarch
 BuildSystem:	texlive
 Requires:	texlive(adhocfilelist.bin)
 Provides:	texlive(%{tl_name}) = %{tl_revision}
+Provides:	texlive(%{tl_name}.bin) = %{tl_revision}
+Provides:	texlive-%{tl_name}.bin = %{EVRD}
 
 %description
 The package provides a Unix shell script to display a list of LaTeX
